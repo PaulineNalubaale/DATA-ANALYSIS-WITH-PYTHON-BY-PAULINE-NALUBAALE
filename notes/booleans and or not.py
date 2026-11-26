@@ -1,0 +1,22 @@
+# Booleans return true or False and 1 or 0
+# Booleans work with conditions eg =, <>, and, or and Not
+# Example 1
+x = 8
+y = 9
+print(not(not(x < 3) and not(y > 14 or y > 10)))
+
+# Before, the operational operators like < and >= worked with NumPy arrays out of the box. Unfortunately, this is not true for the boolean operators and, or, and not.
+
+# To use these operators with NumPy, you will need np.logical_and(), np.logical_or() and np.logical_not(). 
+# Here's an example on the my_house and your_house arrays from before to give you an idea:
+# Example
+# Create arrays
+import numpy as np
+my_house = np.array([18.0, 20.0, 10.75, 9.50])
+your_house = np.array([14.0, 24.0, 14.25, 9.0])
+
+# my_house greater than 18.5 or smaller than 10
+print(np.logical_or(my_house>18.5, my_house<10))
+
+# Both my_house and your_house smaller than 11
+print(np.logical_and(my_house<11, your_house<11))
